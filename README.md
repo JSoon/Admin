@@ -11,6 +11,7 @@ I suggest the following two ways here:
 
 # Features Integration #
 
+* All bootstrap features
 * Form validation
 * Datetime picker
 * Canvas chart
