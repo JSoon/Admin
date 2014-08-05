@@ -17,6 +17,10 @@ Admin is a CMS web-front-end frame, build by Bootstrap v3.1.1
 
 IE8+, Chrome, Firefox (maybe Opera and Safari, not tested yet)
 
-# Current Version
+# Current Version #
 
 SJ Admin v0.0.1
+
+# License #
+
+See details [here](https://github.com/JSoon/Admin/blob/master/LICENSE)
