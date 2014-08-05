@@ -7,7 +7,7 @@ Admin is a CMS web-front-end frame, build by Bootstrap v3.1.1
 I suggest the following two ways here:
 
 1. Copy front-end folder to IIS server, then set dashboard.html as launch page, then run it
-2. Download [xampp](https://www.apachefriends.org/index.html), and put front-end folder into <your disk>:/xampp/htdocs, then run localhost on your browsers
+2. Download [xampp](https://www.apachefriends.org/index.html), and put front-end folder into &lt;your disk&gt;:/xampp/htdocs, then run localhost on your browsers
 
 # Features Integration #
 
