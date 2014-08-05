@@ -1,0 +1,34 @@
+<div class="container-fluid">
+    <ol class="breadcrumb">
+        <li><i class="flaticon-pin8"></i> 你在这里：</li>
+        <li class="active">插件</li>
+        <li class="active">富文本编辑器</li>
+    </ol>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h5 class="panel-title">富文本编辑器</h5>
+        </div>
+        <div class="panel-body">
+            <form class="form">
+                <div class="form-group">
+                    <textarea id="sjUmeditor" class="form-control" rows="3"></textarea>
+                </div>
+            </form>
+        </div><!-- /.panel-body -->
+    </div><!-- /.panel -->
+</div><!-- /.container-fluid -->
+
+<script type="text/javascript">
+    // 生成UMEditor
+    (function ($) {
+        // ajax 载入页面时，切记一定要调用 clearCache 方法，以确保最初的 UMEditor 对象被销毁
+        UM.clearCache('sjUmeditor');
+        var editor = UM.getEditor('sjUmeditor', {
+            initialFrameWidth: '100%',
+            initialFrameHeight: 300,
+            initialContent: '富文本编辑器',
+            autoClearinitialContent: true
+        });
+    })(jQuery);
+</script>
+

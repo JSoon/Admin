@@ -1,0 +1,345 @@
+//
+//
+// 公用样式表
+//
+//
+
+//
+// 颜色变量
+//
+@sj-primary: #344161;
+@sj-primary-dark: #1b2233;
+@sj-secondary: #28324a;
+@sj-secondary-light: #77b3d4;
+@sj-font-dark: #455680;
+@sj-font: #556386;
+@sj-font-light: #ccd8ff;
+//
+// bootstrap 颜色变量
+//
+@gray-darker:            lighten(#000, 13.5%); // #222
+@gray-dark:              lighten(#000, 20%);   // #333
+@gray:                   lighten(#000, 33.5%); // #555
+@gray-light:             lighten(#000, 60%);   // #999
+@gray-lighter:           lighten(#000, 93.5%); // #eee
+@brand-primary:         #428bca;
+@brand-success:         #5cb85c;
+@brand-info:            #5bc0de;
+@brand-warning:         #f0ad4e;
+@brand-danger:          #d9534f;
+//
+// 圆角类
+//
+.rounded-corners (@t: 3px, @r: 3px, @b: 3px, @l: 3px) {
+    -webkit-border-top-left-radius: @t;
+    -webkit-border-top-right-radius: @r;
+    -webkit-border-bottom-right-radius: @b;
+    -webkit-border-bottom-left-radius: @l;
+
+    -moz-border-radius-topleft: @t;
+    -moz-border-radius-topright: @r;
+    -moz-border-radius-bottomright: @b;
+    -moz-border-radius-bottomleft: @l;
+
+    border-top-left-radius: @t;
+    border-top-right-radius: @r;
+    border-bottom-right-radius: @b;
+    border-bottom-left-radius: @l;
+}
+//
+// 阴影类
+//
+.box-shadow (@x, @y, @size, @opacity) {
+    -moz-box-shadow: @x @y @size rgba(0, 0, 0, @opacity);
+    -webkit-box-shadow: @x @y @size rgba(0, 0, 0, @opacity);
+    box-shadow: @x @y @size rgba(0, 0, 0, @opacity);
+}
+//
+// 透明类
+//
+.transparent (@opacity) {
+    @ieOpacity: @opacity * 100;
+    zoom: 1;
+    filter: alpha(opacity=@ieOpacity);
+    opacity: @opacity;
+}
+//
+// 背景透明类
+//
+.bg-transparent (@r, @g, @b, @opacity: 1) {
+    background-color: rgb(@r, @g, @b);
+    background-color: rgba(@r, @g, @b, @opacity);
+}
+//
+// 重写覆盖 animate
+//
+.animated {
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+//
+// 重写覆盖 bootstrap
+//
+// breadcrumb
+.breadcrumb {
+    font-size: 12px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
+    .rounded-corners();
+    background-color: @gray-lighter;
+    > li:first-child + li:before {
+        content: "";
+    }
+}
+// panel
+.panel-title {
+    font-weight: bold;
+    color: @sj-font-dark;
+}
+// btn
+.btn {
+    border-width: 2px;
+    font-weight: bold;
+}
+.btn-lg, .btn-group-lg > .btn {
+    padding: 8px 16px;
+}
+.btn-group .btn + .btn, .btn-group .btn + .btn-group, .btn-group .btn-group + .btn, .btn-group .btn-group + .btn-group {
+    margin-left: -2px;
+}
+// glyphicon
+.glyphicon {
+    top: 2px;
+}
+// tab
+.tab-content {
+    padding: 15px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+// badge
+.badge-primary { background-color: @brand-primary; }
+.badge-success { background-color: @brand-success; }
+.badge-info { background-color: @brand-info; }
+.badge-warning { background-color: @brand-warning; }
+.badge-danger { background-color: @brand-danger; }
+// media
+.media-body {
+    color: @gray-light;
+    .media-heading {
+        font-weight: bold;
+        color: @sj-font-dark;
+    }
+}
+
+//
+// <header id="sjHeader">
+//
+#sjHeader {
+    position: relative;
+    border-bottom: 3px solid @sj-primary-dark;
+    background-color: @sj-primary;
+    z-index: 1; // 定位在 aside 之上
+}
+#sjLogo {
+    float: left;
+    display: block;
+    width: 240px;
+    height: 110px;
+    line-height: 110px;
+    text-align: center;
+    font-weight: bold;
+    color: @sj-font-light;
+    margin-right: 30px;
+}
+#sjPriNav {
+    height: 110px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    > a.sj-1st-nav-item {
+        float: left;
+        display: block;
+        height: 100%;
+        margin-right: 30px;
+        text-align: center;
+        text-decoration: none;
+        color: @sj-font-light;
+        .transparent(0.6);
+        &:hover,
+        &.active {
+            .transparent(1);
+            color: #fff;
+        }
+        h5 {
+            margin-top: 10px;
+            margin-bottom: 0;
+            font-weight: bold;
+        }
+    }
+    // user avatar
+    .sj-user-avatar {
+        float: right;
+        margin-right: 30px; 
+        > a {
+            display: block;
+            height: 100%;
+            text-align: center;
+            text-decoration: none;
+            color: @sj-font-light;
+            &:hover {
+                color: #fff;
+            }
+            h5 {
+                margin-top: 10px;
+                margin-bottom: 0;
+                font-weight: bold;
+            }
+        }
+        .dropdown-menu {
+            left: auto;
+            right: 0;
+            margin-top: 25px;
+            padding: 10px 0;
+            background-color: @sj-primary;
+            border: none;
+            .box-shadow (0, 3px, 0, 0.2);
+            *[class^="flaticon-"] {
+                font-size: 16px;
+            }
+            .sj-arrow-top {
+                width: 13px;
+                height: 0;
+                font-size: 0;
+                border-width: 6px;
+                border-style: solid;
+                border-color: transparent transparent @sj-primary;
+                overflow: hidden;
+                position: absolute;
+                right: 24px;
+                top: -12px;
+            }
+            a {
+                padding: 8px 20px;
+                color: @sj-font-light;
+                &:hover {
+                    background-color: @sj-secondary-light;
+                    color: #fff;
+                }
+            }
+            .divider {
+                margin-left:10px;
+                margin-right:10px;
+                height: 2px;
+                border-top: 1px solid @sj-font;
+                background-color: @sj-secondary;
+            }
+        }
+    }
+}
+//
+// <aside id="sjSubNav">
+//
+#sjAside {
+    @header-height: 113px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 248px;
+    height: 100%;
+    padding-top: @header-height + 15px;
+    padding-bottom: 15px;
+    z-index: 0; // 定位在 header 之下
+    > .sj-aside-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 240px;
+        height: 100%;
+        background-color: @sj-secondary;
+        z-index: -1;
+    }
+}
+#sjSubNav {
+    width: 240px;
+    a.sj-2nd-nav-item,
+    a.sj-3rd-nav-item {
+        display: block;
+        height: 40px;
+        line-height: 40px;
+        padding: 0 18px;
+        color: @sj-font;
+        font-weight: bold;
+        text-decoration: none;
+        .glyphicon { margin-right: 10px; }
+    }
+    a.sj-2nd-nav-item {
+        &:hover,
+        &.active {
+            width: 248px;
+            background-color: @sj-secondary-light;
+            color: #fff;
+            .box-shadow (0, 3px, 0, 0.2);
+        }
+    }
+    ul {
+        display: none;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    a.sj-3rd-nav-item {
+        font-size: 12px;
+        .sj-list-img {
+            display: inline-block;
+            width: 14px;
+            margin-right: 10px;
+            text-align: center;
+        }
+        &:hover,
+        &.active {
+            color: #fff;
+        }
+    }
+}
+//
+// <section id="sjContentPane">
+//
+#sjContentPane {
+    margin-left: 240px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

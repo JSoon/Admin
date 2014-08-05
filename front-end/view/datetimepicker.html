@@ -1,0 +1,44 @@
+<div class="container-fluid">
+    <ol class="breadcrumb">
+        <li><i class="flaticon-pin8"></i> 你在这里：</li>
+        <li class="active">插件</li>
+        <li class="active">日期选择器</li>
+    </ol>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h5 class="panel-title">日期选择器</h5>
+        </div>
+        <div class="panel-body">
+            <form class="form">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <input id="sjDatetimeWithoutIcon" class="form-control" type="text" placeholder="普通的选择器" readonly>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div id="sjDatetimeWithIcon" class="input-group date">
+                            <input type="text" class="form-control" placeholder="带图标的选择器" readonly>
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div><!-- /.panel-body -->
+    </div><!-- /.panel -->
+</div><!-- /.container-fluid -->
+
+<script type="text/javascript">
+    $('#sjDatetimeWithoutIcon, #sjDatetimeWithIcon').datetimepicker({
+        format: 'yyyy-mm-dd hh:ii:ss', // 日期格式
+        autoclose: true, // 选择日期后是否关闭日历
+        todayBtn: true, // 是否显示今日快捷按钮
+        todayHighlight: true, // 是否高亮显示当天日期
+        minuteStep: 10, // 小时以内分钟的步数
+        minView: 0, // 所能够提供的最精确的时间选择视图，0为分钟
+        maxView: 4, // 所能够提供的最高能展示的选择范围视图，4为年
+        language: 'zh-CN', // 日历语言
+        pickerPosition: 'bottom-left' // 日历定位
+    });
+</script>            
+

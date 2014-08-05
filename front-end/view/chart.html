@@ -1,0 +1,41 @@
+<div class='container-fluid'>
+    <ol class='breadcrumb'>
+        <li><i class='flaticon-pin8'></i> 你在这里：</li>
+        <li class='active'>插件</li>
+        <li class='active'>图表</li>
+    </ol>
+    <div class='panel panel-default'>
+        <div class='panel-heading'>
+            <h5 class='panel-title'>柱状图</h5>
+        </div>
+        <div class='panel-body'>
+            <div id="sjBarChart" style="height:400px"></div>
+        </div><!-- /.panel-body -->
+    </div><!-- /.panel -->
+</div><!-- /.container-fluid -->
+
+<script type="text/javascript">
+    var myChart = echarts.init( document.getElementById( 'sjBarChart' ) );
+    var option = {
+        tooltip: {
+            show: true
+        },
+        legend: {
+            data: [ '销量' ]
+        },
+        xAxis: [ {
+            type: 'category',
+            data: [ "衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子" ]
+        } ],
+        yAxis: [ {
+            type: 'value'
+        } ],
+        series: [ {
+            "name": "销量",
+            "type": "bar",
+            "data": [ 5, 20, 40, 10, 10, 20 ]
+        } ]
+    };
+    // 为echarts对象加载数据 
+    myChart.setOption( option );
+</script>

@@ -1,0 +1,124 @@
+<div class="container-fluid">
+    <ol class="breadcrumb">
+        <li><i class="flaticon-pin8"></i> 你在这里：</li>
+        <li class="active">CSS</li>
+        <li class="active">表单</li>
+    </ol>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h5 class="panel-title">表单&nbsp;<small>上下结构</small></h5>
+        </div>
+        <div class="panel-body">
+            <form role="form">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">邮箱</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">密码</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputFile">文件上传</label>
+                    <input type="file" id="exampleInputFile">
+                    <p class="help-block">帮助小贴士写在这里。</p>
+                </div>
+                <div class="form-group">
+                    <label for="">下拉选项</label>
+                    <select class="form-control">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleTextarea">内容</label>
+                    <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="输入内容"></textarea>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> 记住
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-success">保存</button>
+            </form>
+        </div><!-- /.panel-body -->
+    </div><!-- /.panel -->
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h5 class="panel-title">表单&nbsp;<small>左右结构</small></h5>
+        </div>
+        <div class="panel-body">
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-1 control-label">邮箱</label>
+                    <div class="col-sm-11">
+                        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword3" class="col-sm-1 control-label">密码</label>
+                    <div class="col-sm-11">
+                        <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-1 col-sm-11">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> 记住账号
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-1 col-sm-11">
+                        <button type="submit" class="btn btn-primary">登录</button>
+                    </div>
+                </div>
+            </form>
+        </div><!-- /.panel-body -->
+    </div><!-- /.panel -->
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h5 class="panel-title">表单&nbsp;<small>控件尺寸</small></h5>
+        </div>
+        <div class="panel-body">
+            <form class="form" role="form">
+                <div class="form-group">
+                    <input class="form-control input-lg" type="text" placeholder=".input-lg">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Default input">
+                </div>
+                <div class="form-group">
+                    <input class="form-control input-sm" type="text" placeholder=".input-sm">
+                </div>
+                <div class="form-group">
+                    <select class="form-control input-lg">
+                        <option>.input-lg</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="form-control">
+                        <option>Default input</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="form-control input-sm">
+                        <option>.input-sm</option>
+                    </select>
+                </div>
+            </form>
+        </div><!-- /.panel-body -->
+    </div><!-- /.panel -->
+</div><!-- /.container-fluid -->
+
+<script type="text/javascript">
+    $('button[type="submit"]').on('click', function (e) {
+        $(this).addClass('hinge animated');
+        e.preventDefault();
+    });
+</script>
