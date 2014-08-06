@@ -1,6 +1,6 @@
 # Overview #
 
-Admin is a CMS web-front-end frame(back-end will be added later, using ASP.NET probably, based on enough time), build by Bootstrap v3.1.1
+Admin is a CMS web-front-end frame ( back-end will be added later, using ASP.NET probably, based on enough time ), build by Bootstrap v3.1.1
 
 # Usage #
 
